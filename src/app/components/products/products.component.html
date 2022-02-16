@@ -5,22 +5,22 @@
       <button (click)="onGetAllProducts()" class="btn btn-outline-info ml-2">All</button>
     </li>
     <li>
-      <button class="btn btn-outline-info ml-2">Selected</button>
+      <button (click)="onGetSelectedProducts()" class="btn btn-outline-info ml-2">Selected</button>
     </li>
     <li>
-      <button class="btn btn-outline-info ml-2">Available</button>
+      <button (click)="onGetAvailabalProducts()" class="btn btn-outline-info ml-2">Available</button>
     </li>
   </ul>
   </nav>
 <div class="container" *ngIf="products">
   <table class="table" >
     <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Quantity</th>
-    <th>Selected</th>
-    <th>Available</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Selected</th>
+      <th>Available</th>
     </tr>
     <tr *ngFor="let p of products">
       <td>{{p.id}}</td>

@@ -17,6 +17,17 @@ products:Product[]|null =null;
   onGetAllProducts() {
     this.productsService.getAllProducts().subscribe(data => {
       this.products= data;
-  })
-}
+    })
+  }
+  onGetSelectedProducts() {
+    this.productsService.getSelectedProducts().subscribe(data => {
+      this.products= data;
+    })
+  }
+
+  onGetAvailabalProducts() {
+    this.productsService.getAvailableProducts().subscribe(data => {
+      this.products= data;
+    })
+  }
 }
